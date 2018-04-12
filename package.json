@@ -1,0 +1,32 @@
+{
+  "name": "payvision",
+  "version": "1.0.0",
+  "description": "Frontend Software Engineer - Rendering transactions",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santiagomoreta/payvision.git"
+  },
+  "keywords": [
+    "challenge",
+    "payvision"
+  ],
+  "author": "Santiago Moreta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santiagomoreta/payvision/issues"
+  },
+  "homepage": "https://github.com/santiagomoreta/payvision#readme",
+  "devDependencies": {
+    "angular": "1.5.3",
+    "bootstrap": "^4.1.0",
+    "grunt": "^1.0.2",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-uglify": "^3.3.0",
+    "jquery": "1.11.3",
+    "popper.js": "^1.14.3"
+  }
+}
