@@ -28,7 +28,7 @@ module.exports = function (grunt) {
 	    options: {
 	        base: '.',
 	        debug: false,
-	        livereload: true,
+	        livereload: false,
 	        open:
 	        // false
 	        {

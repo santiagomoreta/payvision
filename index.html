@@ -21,12 +21,10 @@
 
 <div id="main" ng-controller="mainController" ng-init="init()">   
   <div id="loader" ng-if="!transactionsData"></div>
-  <div class="row justify-content-end" style="margin-right:0px">
+  <div class="" >
     <div class="mr12">
       <div class="form-group">
-        <select class="form-control input-lg" id="sel1" ng-model="transactionType" ng-init=" transactionType = 'Transaction type'" ng-class="transactionType == 'Transaction type'?'noFontColor':'fontColor'">
-          <option  ng-repeat="type in transactionTypes"  value="{{type.name}}" >{{type.name}}</option>
-        </select>
+        <button class="bt1" ng-click="search()">Search</button>
       </div>
     </div>
     <div class="mr12">
@@ -37,10 +35,14 @@
       </div>
     </div>  
     <div class="mr12">
-      <button class="bt1" ng-click="search()">Search</button>
+      <div class="form-group ">
+        <select class="form-control input-lg" id="sel1" ng-model="transactionType" ng-init=" transactionType = 'Transaction type'" ng-class="transactionType == 'Transaction type'?'noFontColor':'fontColor'">
+          <option  ng-repeat="type in transactionTypes"  value="{{type.name}}" >{{type.name}}</option>
+        </select>        
+      </div>  
     </div>  
   </div>
-  <div id="content">
+  <div id="container-fluid">
     <table class="table table-hover" id="myTable" ng-init="">
       <thead>
         <tr class="fontColor">
@@ -62,50 +64,50 @@
           <td>{{data.currencyCode}}</td>        
         </tr>
           <tr ng-if="toggle[$index]" class="p20">
-            <td colspan="6" class="info">
+            <td colspan="6" class="info">     
               <div class="row p12">
-                  <div class="col-md-2 fontColor">
+                  <div class="col-sm-2 fontColor">
                       ID:
                   </div>    
-                  <div class="col-md-4">
+                  <div class="col-sm-4">
                       {{data.id}}
                   </div>    
-                  <div class="col-md-2 fontColor">
+                  <div class="col-sm-2 fontColor">
                       First 6 digits:
                   </div>    
-                  <div class="col-md-2">
+                  <div class="col-sm-2">
                       {{data.card.firstSixDigits}}    
                   </div>                         
               </div>
               <div class="row p12">
-                  <div class="col-md-2 fontColor">
+                  <div class="col-sm-2 fontColor">
                       Tracking code:
                   </div>    
-                  <div class="col-md-4">
+                  <div class="col-sm-4">
                       {{data.trackingCode}}
                   </div>   
-                  <div class="col-md-2 fontColor">
+                  <div class="col-sm-2 fontColor">
                       Expiry month:
                   </div>    
-                  <div class="col-md-2">
+                  <div class="col-sm-2">
                       {{data.card.expiryMonth}}    
                   </div>                         
               </div>    
               <div class="row p12">
-                  <div class="col-md-2 fontColor">
+                  <div class="col-sm-2 fontColor">
                       Brand ID:
                   </div>    
-                  <div class="col-md-3">
+                  <div class="col-sm-3">
                       {{data.brandId}}
                   </div>  
-                  <div class="col-md-1"></div>   
-                  <div class="col-md-2 fontColor">
+                  <div class="col-sm-1"></div>   
+                  <div class="col-sm-2 fontColor">
                       Expiry year:
                   </div>    
-                  <div class="col-md-2">
+                  <div class="col-sm-2">
                       {{data.card.expiryYear}}    
                   </div>                         
-              </div>                      
+              </div> 
             </td>
           </tr>
       </tbody>
